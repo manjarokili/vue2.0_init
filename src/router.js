@@ -7,6 +7,7 @@ import SearchContainer from './components/tabbar/SearchContainer.vue'
 import NewsList from './components/news/NewsList.vue'
 import SongList from './components/song/SongList.vue'
 import RiskingList from './components/risking/RiskingList.vue'
+import RadioList from './components/radio/RadioList.vue'
 
 Vue.use(Router);
 
@@ -20,6 +21,7 @@ var router = new Router({
   {path:'/home/newslist',component:NewsList},//path拼错 汗。。。
   {path:'/home/songlist',component:SongList},
   {path:'/home/riskinglist',component:RiskingList},
+  {path:'/home/radiolist',component:RadioList},
   ],
   linkActiveClass: 'mui-active',
   //覆盖默认的router-link-active类，显示高亮
