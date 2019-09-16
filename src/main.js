@@ -19,7 +19,6 @@ Vue.component(Swipe.name, Swipe);
 Vue.component(SwipeItem.name, SwipeItem);
 
 //按需导入vant中的组件
-
 import { Grid, GridItem, Icon } from 'vant';
 Vue.use(Grid).use(GridItem);
 Vue.use(Icon);
