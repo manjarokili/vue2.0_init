@@ -1,13 +1,14 @@
+
 <template>
   <div>
     <!-- 轮播图区域 -->
 
-    <mt-swipe :auto="4000">
-    <h1>这是轮播图区域</h1>
-    <!-- <mt-swipe-item>1111</mt-swipe-item>
-      <mt-swipe-item>2222</mt-swipe-item>
-    <mt-swipe-item>3333</mt-swipe-item>-->
-    </mt-swipe>
+    <van-swipe :autoplay="3000" indicator-color="white" class="vant-swipe">
+      <van-swipe-item>1</van-swipe-item>
+      <van-swipe-item>2</van-swipe-item>
+      <van-swipe-item>3</van-swipe-item>
+      <van-swipe-item>4</van-swipe-item>
+    </van-swipe>
 
     <!-- grid -->
     <ul class="row">
@@ -37,92 +38,106 @@
         </li>
       </van-grid>
     </ul>
-    <ul class="row" id = 'tag'>
-      <li class = "col-xs-9" id="item"><h3>推荐歌单</h3></li>
-      <li class = "col-xs-3" id="item"><button>歌单广场</button></li>
+    <ul id="tag">
+      <li id="item">
+        <h3>推荐歌单</h3>
+      </li>
+      <li id="item">
+        <button>歌单广场</button>
+      </li>
     </ul>
 
-    <van-grid :border="false" :column-num="3">
-  <van-grid-item>
-    <img src="https://img.yzcdn.cn/vant/apple-1.jpg" />
-  </van-grid-item>
-  <van-grid-item>
-    <img src="https://img.yzcdn.cn/vant/apple-2.jpg" />
-  </van-grid-item>
-  <van-grid-item>
-    <img src="https://img.yzcdn.cn/vant/apple-3.jpg" />
-  </van-grid-item>
-</van-grid>
-
-    <!-- mui九宫格改造成五宫格 -->
-    <!-- <ul class="mui-table-view mui-grid-view mui-grid-9">
-      <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
-        <router-link to="/home/newslist">
-          <span class="mui-icon mui-icon-extra mui-icon-extra-calendar"></span>
-          <div class="mui-media-body">每日推荐</div>
-        </router-link>
+    <ul id="box">
+      <li id="boxItem">
+        <img
+          id="listImg"
+          src="https://ae01.alicdn.com/kf/Ha4ea88e1005d47e48eff1fb86e892eb3R.jpg"
+          alt="0"
+        />
+        <p>dddddddd</p>
       </li>
-
-      <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
-        <router-link to="/home/songlist">
-          <span class="mui-icon mui-icon-email"></span>
-          <div class="mui-media-body">歌单</div>
-        </router-link>
+      <li id="boxItem">
+        <img
+          id="listImg"
+          src="https://ae01.alicdn.com/kf/H3aa7d861305a475fb3477b06cca25557m.jpg"
+          alt="1"
+        />
+        <p>dddddddcn</p>
       </li>
-
-      <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
-        <router-link to="/home/riskinglist">
-          <span class="mui-icon mui-icon-chatbubble"></span>
-          <div class="mui-media-body">排行榜</div>
-        </router-link>
+      <li id="boxItem">
+        <img src="https://ae01.alicdn.com/kf/H957ce765d5364147a02be4a2629b2fb5C.jpg" alt="2" />
+        <p>xscienv</p>
       </li>
-
-      <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
-        <a href="#">
-          <span class="mui-icon mui-icon-search"></span>
-          <div class="mui-media-body">电台</div>
-        </a>
+      <li id="boxItem">
+        <img
+          id="listImg"
+          src="https://ae01.alicdn.com/kf/H4a528a97d769430293545d0490b04959T.jpg"
+          alt="3"
+        />
       </li>
-    </ul>-->
+      <li id="boxItem">
+        <img
+          id="listImg"
+          src="https://ae01.alicdn.com/kf/Hafba663c58c642048802d504302e3939U.jpg"
+          alt="4"
+        />
+      </li>
+      <li id="boxItem">
+        <img
+          id="listImg"
+          src="https://ae01.alicdn.com/kf/H3aa7d861305a475fb3477b06cca25557m.jpg"
+          alt="5"
+        />
+      </li>
+    </ul>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
   </div>
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      checked: true
-    };
-  }
-};
 </script>
 
 <style lang="scss" scoped>
-.mint-swipe {
+.vant-swipe {
   height: 200px;
-}
-
-img{
-  width: 100%;
-}
-#tag{
-  color:rgb(71, 68, 68);
-  background-color:none;
-  margin: 8px;
-  button{
-    border-radius: 20%;
-   
+  .van-swipe-item{
+    background-color: lightblue;
   }
 }
-div{
+
+img {
+  width: 100%;
+}
+#tag {
+  display: flex;
+  justify-content: space-between;
+  color: rgb(71, 68, 68);
+  background-color: none;
+  margin: 8px;
+  button {
+    border-radius: 20%;
+  }
+}
+div {
   background-color: #fff;
 }
-// .mui-grid-view.mui-grid-9 {
-//   border: none;
-// }
-// .mui-grid-view.mui-grid-9 .mui-table-view-cell {
-//   border: 0;
-//   border-right: none;
-//   border-bottom: none;
-// }
+#box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  #boxItem {
+    width: 100px;
+    //padding-top: 20px;
+    #listImg {
+      border-radius: 5%;
+    }
+  }
+}
 </style>
